@@ -117,18 +117,18 @@ fetch(`https://api.postalpincode.in/pincode/${data.postal}`)
 
 const searchterm = document.getElementById('search');
 searchterm.addEventListener('input',(e)=>{
-    // const searchQuery=e.target.value.toLowerCase();
-    // const postOfficeList=document.getElementById('searchresult').children;
-    // console.log(postOfficeList);
-    // Array.from(postOfficeList).forEach(item =>{
-    //     const postOfficeName=item.children[0].textContent.split(": ")[1].toLowerCase();
-    //     if(postOfficeName.includes(searchQuery)){
-    //         item.style.display="none";
-    //     }else{
-    //         item.style.display="block";
-    //     }
-    //     console.log(postOfficeName);
-    // });
+     const searchQuery=e.target.value.toLowerCase();
+     const postOfficeList=document.getElementById('searchresult').children;
+     console.log(postOfficeList);
+     Array.from(postOfficeList).forEach(item =>{
+         const postOfficeName=item.children[0].textContent.split(": ")[1].toLowerCase();
+         if(postOfficeName.includes(searchQuery)){
+             item.style.display="none";
+         }else{
+             item.style.display="block";
+         }
+         console.log(postOfficeName);
+     });
     let key = e.target.value;
      console.log(key);
 });
